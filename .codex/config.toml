@@ -1,0 +1,6 @@
+# Project-level configuration for Codex Command Line Interface.
+# Project configuration is loaded from .codex/config.toml and merged with user config,
+# with a defined precedence order. :contentReference[oaicite:1]{index=1}
+
+approval_policy = "on-request"
+sandbox = false
