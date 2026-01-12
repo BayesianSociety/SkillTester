@@ -1,0 +1,28 @@
+{
+  "environment": {
+    "LANG": "C",
+    "LC_ALL": "C",
+    "PYTHONHASHSEED": "0",
+    "python": "/usr/bin/python3"
+  },
+  "logs": {
+    "logs/01_get_13f.log": "/home/postnl/SkillTester/logs/01_get_13f.log",
+    "logs/02_extract_fields.log": "/home/postnl/SkillTester/logs/02_extract_fields.log"
+  },
+  "outputs": {
+    "output.txt": "/home/postnl/SkillTester/output.txt",
+    "outputs/filing_fields.json": "/home/postnl/SkillTester/outputs/filing_fields.json",
+    "outputs/filing_url.txt": "/home/postnl/SkillTester/outputs/filing_url.txt"
+  },
+  "scripts": {
+    "extract_filing.py": {
+      "sha256": "00e5ece2cf0ebb52fa00359998779bdef2c0a7d1b8628a4cdab96178fd26eb1a"
+    },
+    "get_13f.py": {
+      "sha256": "55abb6c140923c019a310fd047f693a36176126ea129759e5d6893fc84276554"
+    },
+    "pipeline/extract_from_output.py": {
+      "sha256": "287825277d7db509c14283c5f8f1e5d18eb07d0f702ef2a7f746e672574a7a0a"
+    }
+  }
+}

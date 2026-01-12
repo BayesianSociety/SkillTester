@@ -60,3 +60,32 @@ Resource
 
   1. Run tests with python3 -m pytest
   2. Run the deterministic pipeline with ./run_pipeline_deterministic.sh
+ 
+
+• Register
+Paste this into ~/.codex/config.toml (or add it to the existing file). It registers your local STDIO MCP server at /home/postnl/SkillTester/mcp_server.py:
+
+[mcp_servers.skilltester]
+command = "python3"
+args = ["-u", "/home/postnl/SkillTester/mcp_server.py"]
+cwd = "/home/postnl/SkillTester"
+enabled = true
+startup_timeout_sec = 20
+tool_timeout_sec = 60
+
+[mcp_servers.skilltester.env]
+PYTHONUNBUFFERED = "1"
+  
+• Here’s how to run the already‑registered MCP from the Codex agent:
+
+  1. Start Codex in the repo:
+
+  codex --cd /home/postnl/SkillTester
+
+  2. In the Codex chat, ask it to call the tool directly. Example:
+     “Use MCP tool run_deterministic_pipeline with cik = 0002012383.”
+
+  That’s it. Codex will auto‑start the registered MCP server over stdio and call the tool.
+
+  If you want to verify the tools are visible first, you can use the built‑in command in the Codex UI:
+  “list configured MCP tools”

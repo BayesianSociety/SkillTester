@@ -4,3 +4,15 @@
 
 approval_policy = "on-request"
 sandbox = false
+
+
+[mcp_servers.skilltester]
+command = "python3"
+args = ["-u", "/home/postnl/SkillTester/mcp_server.py"]
+cwd = "/home/postnl/SkillTester"
+enabled = true
+startup_timeout_sec = 20
+tool_timeout_sec = 60
+
+[mcp_servers.skilltester.env]
+PYTHONUNBUFFERED = "1"
